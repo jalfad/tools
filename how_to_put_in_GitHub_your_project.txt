@@ -1,0 +1,19 @@
+how to put in GitHub your project 
+
+Open Command Prompt / Terminal inside your project folder:
+
+cd C:\Users\jalfad\Desktop\tools
+
+Initialize GIT:
+git init
+add your files:
+git add .
+commit them
+git commit - m "--Description--"
+
+
+link to GITHUB repo
+
+git remote add origin https://github.com/yourname/local-ocr-tool.git
+git branch -M main 
+git push -u origin main 
