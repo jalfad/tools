@@ -12,7 +12,7 @@ def run_ocr():
  )
     if not file_path:
         return
-    
+     
     try:
         img = Image.open(file_path)
 
