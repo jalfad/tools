@@ -1,0 +1,56 @@
+1.	One- time setup
+	Install Python (3.10+ recommended).
+
+	On Windows, the easiest is the official installer. During install, tick “Add Python to PATH.”
+
+	Install VS Code extensions (from the Extensions sidebar):
+
+	Python (Microsoft)
+
+	Pylance (Microsoft)
+
+	(Optional but nice) Jupyter (Microsoft)
+
+2)	Create a fresh project
+	Make a folder anywhere, e.g. C:\Users\<you>\Documents\excel-automation.
+
+	In VS Code, File → Open Folder… and open that folder.
+
+	Open the built-in terminal: Terminal → New Terminal.
+
+	Tip: If you previously got script/ExecutionPolicy errors, use Command Prompt for now:
+
+	Terminal tab ▸ “+” dropdown → Command Prompt
+
+	Or set Terminal → Select Default Profile → Command Prompt.
+
+3.	Create & activate a virtual environment
+	py -m venv .venv
+
+	Now activate it (you should see a ( .venv ) prefix in your terminal after this):
+	.venv\Scripts\activate.bat
+
+4.	Tell VS Code to use this env
+
+	Press Ctrl+Shift+P → Python: Select Interpreter → pick the one that ends with 
+	.venv\Scripts\python.exe.
+
+	VS Code will remember this for the workspace.
+
+5.	Install the Excel packages into the env
+	
+	With ( .venv ) active:
+	python -m pip install --upgrade pip
+	pip install openpyxl pandas
+	to save dependencies : pip freeze > requirements.txt
+
+6.	Project structure to start with
+excel-automation/
+├─ .venv/                 ← your virtual environment
+├─ output/                ← where files will be written
+├─ main_create_excel.py   ← create a workbook and write data
+├─ main_modify_excel.py   ← read/modify with pandas
+├─ requirements.txt
+└─ README.md
+
+	
