@@ -17,3 +17,9 @@ link to GITHUB repo
 git remote add origin https://github.com/yourname/local-ocr-tool.git
 git branch -M main 
 git push -u origin main 
+
+
+update files
+git add .
+git commit -m "update"
+git push
